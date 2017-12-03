@@ -1,0 +1,2 @@
+class Demograffic < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Demograffics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demograffics.each do |demograffic| %>
+      <tr>
+        <td><%= demograffic.name %></td>
+        <td><%= demograffic.age %></td>
+        <td><%= link_to 'Show', demograffic %></td>
+        <td><%= link_to 'Edit', edit_demograffic_path(demograffic) %></td>
+        <td><%= link_to 'Destroy', demograffic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demograffic', new_demograffic_path %>
